@@ -4,6 +4,7 @@ const Header = () => {
   return (
     <>
       <h2>Lovely bookkeeper</h2>
+      <hr />
       <div class='container'>
         <Balance />
       </div>
