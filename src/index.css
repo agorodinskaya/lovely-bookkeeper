@@ -14,9 +14,9 @@
   --clr-primary: #0e3e8550;
   --gradient: linear-gradient(
     90deg,
-    #09adeecc,
-    #1d86fd62,
-    #4e1dfd48,
+    #09adee70,
+    #1d86fd41,
+    #4e1dfd25,
     #e462f562
   );
 }
@@ -100,7 +100,6 @@ h1 {
 }
 
 h3 {
-  border-bottom: 1px solid #bbb;
   padding-bottom: 10px;
   margin: 40px 0 10px;
 }
@@ -110,36 +109,36 @@ h4 {
   text-transform: uppercase;
 }
 
-.inc-exp-container {
-  background-color: #fff;
-  box-shadow: var(--box-shadow);
+.dt-ct-container {
+  background-color: var(--clr-bcg);
+  box-shadow: var(--dark-shadow);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
 }
 
-.inc-exp-container > div {
+.dt-ct-container > div {
   flex: 1;
   text-align: center;
 }
 
-.inc-exp-container > div:first-of-type {
+.dt-ct-container > div:first-of-type {
   border-right: 1px solid #dedede;
 }
 
-.money {
+.txn {
   font-size: 20px;
   letter-spacing: 1px;
   margin: 5px 0;
 }
 
-.money.plus {
-  color: #2eb4cc;
+.txn.plus {
+  color: #1d9fb6;
 }
 
-.money.minus {
-  color: #c02baa;
+.txn.minus {
+  color: #b3169b;
 }
 
 label {
