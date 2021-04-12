@@ -5,7 +5,7 @@ const Header = () => {
     <>
       <h2>Lovely bookkeeper</h2>
       <hr />
-      <div class='container'>
+      <div className='container'>
         <Balance />
       </div>
     </>

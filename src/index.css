@@ -4,12 +4,14 @@
   --clr-black: #333;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
-  --radius: 0.85rem;
+  --radius: 0.55rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
   --clr-font: #06113b;
+  --clr-font-lght: #eccdf8fa;
+  --font-family: "Libre Baskerville";
   --clr-primary: #0e3e8550;
   --gradient: linear-gradient(
     90deg,
@@ -33,7 +35,7 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: "Libre Baskerville", serif;
+  font-family: var(--font-family);
   background: var(--gradient);
   color: var(--clr-black);
   line-height: 1.5;
@@ -143,14 +145,88 @@ h4 {
 label {
   display: inline-block;
   margin: 10px 0;
+  color: var(--clr-primary);
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 input[type="text"],
 input[type="number"] {
-  border: 1px solid #dedede;
-  border-radius: 2px;
+  border: 1px solid var(--clr-font-lght);
+  border-radius: var(--radius);
   display: block;
-  font-size: 16px;
+  font-size: 1rem;
   padding: 10px;
   width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: var(--clr-primary);
+  box-shadow: var(--dark-shadow);
+  color: var(--clr-font-lght);
+  border: 0;
+  display: block;
+  font-size: 1.2rem;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+  border-radius: var(--radius);
+  font-weight: bold;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #b3169b;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #b3169b;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 300px;
+  }
 }

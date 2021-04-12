@@ -1,13 +1,16 @@
 import Header from "./components/Header";
 import DebitCredit from "./components/DebitCredit";
 import Transactions from "./components/Transactions";
+import Add from "./components/AddItem";
+import { GlobalProvider } from "./context/GlobalContext";
 function App() {
   return (
-    <div className='App'>
+    <GlobalProvider>
       <Header />
       <DebitCredit />
       <Transactions />
-    </div>
+      <Add />
+    </GlobalProvider>
   );
 }
 
