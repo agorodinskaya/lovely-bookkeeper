@@ -5,9 +5,6 @@ const Header = () => {
     <>
       <h2>Lovely bookkeeper</h2>
       <hr />
-      <div className='container'>
-        <Balance />
-      </div>
     </>
   );
 };

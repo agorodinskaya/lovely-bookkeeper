@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
+import { GlobalContext } from "../context/GlobalContext";
 const Transaction = ({ transaction }) => {
   const sign = transaction.amount < 0 ? "-" : "+";
+  const { deleteTransaction } = useContext(GlobalContext);
   return (
     <div>
       <li
@@ -12,7 +14,12 @@ const Transaction = ({ transaction }) => {
         <span>
           {sign} $ {Math.abs(transaction.amount)}
         </span>
-        <button className='delete-btn'>
+        <button
+          className='delete-btn'
+          onClick={() => {
+            deleteTransaction(transaction.id);
+          }}
+        >
           <FaRegTrashAlt />
         </button>
       </li>

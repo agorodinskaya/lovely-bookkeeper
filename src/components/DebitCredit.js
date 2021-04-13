@@ -21,7 +21,7 @@ const DebitCredit = () => {
       </div>
       <div>
         <h4>Cost</h4>
-        <p className='txn minus'>-${Math.abs(cost)}</p>
+        <p className='txn minus'>-${Math.abs(cost).toFixed(2)}</p>
       </div>
     </div>
   );
