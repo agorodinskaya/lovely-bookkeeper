@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Mukta&display=swap");
 
 :root {
   --clr-black: #333;
@@ -11,7 +11,8 @@
   --fixed-width: 620px;
   --clr-font: #06113b;
   --clr-font-lght: #eccdf8fa;
-  --font-family: "Libre Baskerville";
+  --clr-delete: #f71a76a9;
+  --font-family: "Maven Pro", sans-serif;
   --clr-primary: #0e3e8550;
   --gradient: linear-gradient(
     90deg,
@@ -40,14 +41,12 @@ body {
   color: var(--clr-black);
   line-height: 1.5;
   font-size: 0.875rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family: "Lato", sans-serif;
 }
 ul {
   list-style-type: none;
@@ -142,6 +141,16 @@ h4 {
   color: #b3169b;
 }
 
+.plus {
+  color: #0fa3bd;
+  font-weight: bold;
+}
+
+.minus {
+  color: #f51fd5;
+  font-weight: bold;
+}
+
 label {
   display: inline-block;
   margin: 10px 0;
@@ -189,16 +198,20 @@ input[type="number"] {
 .list li {
   background-color: #fff;
   box-shadow: var(--box-shadow);
-  color: #333;
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: 10px;
+  border: 1px solid var(--clr-font-lght);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 100%;
   margin: 10px 0;
+  color: var(--clr-primary);
 }
 
 .list li.plus {
-  border-right: 5px solid #2ecc71;
+  border-right: 5px solid #2e80cc;
 }
 
 .list li.minus {
@@ -207,7 +220,7 @@ input[type="number"] {
 
 .delete-btn {
   cursor: pointer;
-  background-color: #b3169b;
+  background-color: var(--clr-delete);
   border: 0;
   color: #fff;
   font-size: 20px;
@@ -215,7 +228,7 @@ input[type="number"] {
   padding: 2px 5px;
   position: absolute;
   top: 50%;
-  left: 0;
+  right: -10%;
   transform: translate(-100%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease;

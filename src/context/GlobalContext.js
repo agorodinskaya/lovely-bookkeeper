@@ -5,7 +5,8 @@ const initState = {
   transactions: [
     { id: 1, text: "Codecademy course", amount: -40 },
     { id: 2, text: "Phone charge", amount: -25 },
-    { id: 3, text: "Cofee", amount: -18 },
+    { id: 3, text: "Coffee", amount: -18 },
+    { id: 4, text: "Salary", amount: 1000 },
   ],
 };
 
