@@ -350,7 +350,7 @@ input[type="number"] {
     background-color: var(--clr-delete);
     border: 0;
     color: #fff;
-    font-size: 20px;
+    font-size: 40px;
     line-height: 20px;
     padding: 2px 5px;
     position: absolute;
